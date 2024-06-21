@@ -23,6 +23,21 @@ li.forEach((e) => {
   });
 });
 
+const elem = document.querySelectorAll(".last-part .elem");
+
+elem.forEach((e) => {
+  console.log(e);
+  e.addEventListener("mouseenter", () => {
+    cursor.style.padding = "20px";
+    cursor.style.backgroundColor = "transparent";
+    cursor.style.border = "0.5px solid #fff";
+  });
+  e.addEventListener("mouseleave", () => {
+    cursor.style.padding = "0px";
+    cursor.style.backgroundColor = "";
+    cursor.style.border = "";
+  });
+});
 const card = document.querySelectorAll(".card");
 
 card.forEach((e) => {
@@ -38,6 +53,7 @@ card.forEach((e) => {
     cursor.style.border = "";
   });
 });
+
 const sliderSwiper = document.querySelectorAll(".sliderSwiper .swiper-slide");
 
 sliderSwiper.forEach((e) => {
@@ -93,6 +109,18 @@ var swiper = new Swiper(".sliderSwiper", {
       slidesPerView: 5,
       spaceBetween: 50,
     },
+  },
+});
+
+gsap.from(".last-part h1", {
+  y: 50,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".last-part h1",
+    scroller: "body",
+    start: "top 75%",
+    end: "top 70%",
+    scrub: 1,
   },
 });
 
