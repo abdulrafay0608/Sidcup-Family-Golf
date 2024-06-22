@@ -1,10 +1,41 @@
 const cursor = document.querySelector(".cursor");
 const cursorBlur = document.querySelector(".cursor-blur");
 document.addEventListener("mousemove", (dets) => {
-  cursor.style.left = dets.x + "px";
-  cursor.style.top = dets.y + "px";
+  cursor.style.left = dets.x + 2 + "px";
+  cursor.style.top = dets.y + 2 + "px";
   cursorBlur.style.left = dets.x - 200 + "px";
   cursorBlur.style.top = dets.y - 200 + "px";
+});
+
+const a = document.querySelectorAll(".footer a");
+
+a.forEach((e) => {
+  console.log(e);
+  e.addEventListener("mouseenter", () => {
+    cursor.style.padding = "20px";
+    cursor.style.backgroundColor = "transparent";
+    cursor.style.border = "0.5px solid #fff";
+  });
+  e.addEventListener("mouseleave", () => {
+    cursor.style.padding = "0px";
+    cursor.style.backgroundColor = "";
+    cursor.style.border = "";
+  });
+});
+const h3 = document.querySelectorAll(".footer h3");
+
+h3.forEach((e) => {
+  console.log(e);
+  e.addEventListener("mouseenter", () => {
+    cursor.style.padding = "20px";
+    cursor.style.backgroundColor = "transparent";
+    cursor.style.border = "0.5px solid #fff";
+  });
+  e.addEventListener("mouseleave", () => {
+    cursor.style.padding = "0px";
+    cursor.style.backgroundColor = "";
+    cursor.style.border = "";
+  });
 });
 
 const li = document.querySelectorAll(".navbar li");
