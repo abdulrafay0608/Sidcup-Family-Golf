@@ -30,6 +30,7 @@ body {
 #main {
     position: relative;
     background-color: rgba(0, 0, 0, 0.39);
+    width: 100%;
 }
 
 .page1 {
@@ -101,20 +102,18 @@ body {
 .navbar {
     height: 130px;
     width: 100%;
-    /* background-color: #000; */
     display: flex;
     align-items: center;
-    /* padding: 0 120px; */
-    gap: 50px;
     position: fixed;
-    justify-content: flex-start;
+    justify-content: space-around;
     z-index: 999;
+    
 }
 
 
 .navbar .logo {
     height: auto;
-    width: 10%;
+    width: 120px;
     transition: all 0.2s ease-in;
 }
 
@@ -134,7 +133,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
+    
 }
 
 
@@ -148,28 +148,32 @@ body {
 }
 
 .navbar .nav-btn ul {
-    /* background-color: brown; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     justify-self: flex-end;
-    gap: 35px;
+    gap: 15px;
 }
-
-
 
 .navbar .nav-btn ul li {
     list-style-type: none;
     position: relative;
     border: 2px solid #95c809;
-    padding: 15px 30px;
+    padding: 12px 30px;
     border-radius: 50px;
+    background-color: #000;
     overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.navbar .nav-btn ul li:hover {
+    background-color: transparent;
+
 }
 
 .navbar .nav-btn ul li a {
     text-decoration: none;
     color: #fff;
+    font-weight: 600;
     /* background-color: #95C11E; */
 }
 
@@ -193,6 +197,10 @@ body {
 .navbar .nav-btn ul li a:hover {
     color: #000;
 }
+
+/*  */
+
+
 
 video {
     height: 100%;
@@ -354,7 +362,7 @@ video {
     align-items: center;
     color: #fff;
     padding: 0 7vw;
-    /* gap: 30px; */
+    gap: 15px;
     position: relative;
 }
 
@@ -432,13 +440,6 @@ video {
 }
 
 
-.cards-container .pettarn img {
-    /* background-color: red; */
-    position: absolute;
-    width: 15%;
-    top: -20%;
-    /* z-index: 1; */
-}
 
 .page3 {
     min-height: 100vh;
@@ -885,4 +886,12 @@ video {
 
 .bottom-part p a:hover {
     color: #fff;
+}
+
+.humburger {
+    display: none;
+}
+
+.book-now {
+    display: none;
 }

@@ -7,10 +7,27 @@ document.addEventListener("mousemove", (dets) => {
   cursorBlur.style.top = dets.y - 200 + "px";
 });
 
+const humburger = document.querySelector(".humburger");
+const showMenu = document.querySelector(".navbar .menu");
+
+let isTrue = 0;
+
+humburger.addEventListener("click", () => { 
+  if (isTrue == 0) {
+    showMenu.style.display = "block";
+    showMenu.style.display = "flex";
+    isTrue = 1;
+  } else {
+    showMenu.style.display = "none";
+    isTrue = 0;
+  }
+});
+
+// cursor code
+
 const a = document.querySelectorAll(".footer a");
 
 a.forEach((e) => {
-  console.log(e);
   e.addEventListener("mouseenter", () => {
     cursor.style.padding = "20px";
     cursor.style.backgroundColor = "transparent";
@@ -25,7 +42,6 @@ a.forEach((e) => {
 const h3 = document.querySelectorAll(".footer h3");
 
 h3.forEach((e) => {
-  console.log(e);
   e.addEventListener("mouseenter", () => {
     cursor.style.padding = "20px";
     cursor.style.backgroundColor = "transparent";
@@ -41,7 +57,6 @@ h3.forEach((e) => {
 const li = document.querySelectorAll(".navbar li");
 
 li.forEach((e) => {
-  console.log(e);
   e.addEventListener("mouseenter", () => {
     cursor.style.padding = "20px";
     cursor.style.backgroundColor = "transparent";
@@ -57,7 +72,6 @@ li.forEach((e) => {
 const elem = document.querySelectorAll(".last-part .elem");
 
 elem.forEach((e) => {
-  console.log(e);
   e.addEventListener("mouseenter", () => {
     cursor.style.padding = "20px";
     cursor.style.backgroundColor = "transparent";
@@ -72,7 +86,6 @@ elem.forEach((e) => {
 const card = document.querySelectorAll(".card");
 
 card.forEach((e) => {
-  console.log(e);
   e.addEventListener("mouseenter", () => {
     cursor.style.padding = "20px";
     cursor.style.backgroundColor = "transparent";
@@ -88,7 +101,6 @@ card.forEach((e) => {
 const sliderSwiper = document.querySelectorAll(".sliderSwiper .swiper-slide");
 
 sliderSwiper.forEach((e) => {
-  console.log(e);
   e.addEventListener("mouseenter", () => {
     cursor.style.padding = "20px";
     cursor.style.backgroundColor = "transparent";
@@ -100,6 +112,8 @@ sliderSwiper.forEach((e) => {
     cursor.style.border = "";
   });
 });
+
+// swiper code
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
@@ -129,8 +143,8 @@ var swiper = new Swiper(".sliderSwiper", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+      slidesPerView: 3,
+      spaceBetween: 10,
     },
     768: {
       slidesPerView: 4,
@@ -143,6 +157,7 @@ var swiper = new Swiper(".sliderSwiper", {
   },
 });
 
+// gsap code
 gsap.from(".last-part h1", {
   y: 50,
   opacity: 0,
