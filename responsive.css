@@ -150,8 +150,8 @@
     }
 
     .card {
-        min-height: 500px;
-        min-width: 400px;
+        max-height: 500px;
+        max-width: 400px;
         border-radius: 20px;
         overflow: hidden;
         position: relative;
@@ -261,7 +261,7 @@
         position: absolute;
         left: 0;
         height: 100%;
-     display: none;
+        display: none;
     }
 
 }
